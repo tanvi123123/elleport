@@ -1,39 +1,13 @@
-import HelloComponent from './components/HelloComponent.js';
-
 ---
 type: page
-title: About
+title: Attendance
 date: 2021-03-19
 ---
 
-# Syslab website
+# Attendance Website
 
-This is our website to display our Senior Research Project.
-
-<HelloComponent />
-
----
-
-<style>
-  {`
-    body {
-      background-color: #fffff0;
-    }
-  `}
-</style>
+import ConditionalBox from './components/ConditionalBox.jsx';
+import AttendanceList from './components/AttendanceList.jsx';
 
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/Fjp2TdlTTIU?si=R1a5lozNvdQIZYXu"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen
-/>
-
-<video width="560" height="315" controls>
-  <source src="/videos/bmp.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<AttendanceList />
