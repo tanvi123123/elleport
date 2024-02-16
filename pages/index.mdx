@@ -1,26 +1,28 @@
 import HelloComponent from './components/HelloComponent.js';
+import ButtonInput from './components/ButtonInput.js';
+import WebSocketClient from 'utils/websocketClient.js';
 
 ---
 type: page
-title: About
-date: 2021-03-19
+title: Index
+date: 2024-02-13
 ---
+
+<nav>
+  <ul>
+    <li><a href="/photos">Photos</a></li>
+  </ul>
+</nav>
 
 # Syslab website
 
 This is our website to display our Senior Research Project.
 
 <HelloComponent />
-
----
-
-<style>
-  {`
-    body {
-      background-color: #fffff0;
-    }
-  `}
-</style>
+<ButtonInput />
+<div id="websocketOutput">
+  {typeof window !== 'undefined' && <p>Loading...</p>}
+</div>
 
 
 <iframe

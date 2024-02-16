@@ -1,0 +1,18 @@
+// JavaScript code for the client-side
+const ws = new WebSocket('ws://localhost:8080');
+
+ws.onopen = function() {
+  console.log('Connected to WebSocket server');
+};
+
+ws.onmessage = function(event) {
+  const data = JSON.parse(event.data);
+  // Display the received stream data (replace this with your own display logic)
+  const img = document.createElement('img');
+  img.src = 'data:image/jpeg;base64,' + data.image; // Assuming image data is in base64 format
+  document.body.appendChild(img);
+};
+
+ws.onclose = function() {
+  console.log('Connection closed');
+};
